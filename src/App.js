@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Buffer } from 'buffer'; // ✅ Added for Webpack 5 polyfill
+window.Buffer = Buffer;          // ✅ Makes Buffer globally available
 
 const App = () => {
   const [wallet, setWallet] = useState('');
